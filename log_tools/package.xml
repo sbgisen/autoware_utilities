@@ -10,6 +10,6 @@
   <buildtool_depend>autoware_build_flags</buildtool_depend>
   <buildtool_depend>catkin</buildtool_depend>
 
-  <exec_depend>python-flask</exec_depend>
+  <exec_depend>python3-flask</exec_depend>
   <exec_depend>rospy</exec_depend>
 </package>
