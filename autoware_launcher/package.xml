@@ -8,11 +8,11 @@
 
   <buildtool_depend>catkin</buildtool_depend>
 
-  <depend>python-rospkg</depend>
+  <depend>python3-rospkg</depend>
   <depend>python_qt_binding</depend>
   <depend>rospy</depend>
 
   <test_depend>rostest</test_depend>
-  <test_depend>python-nose</test_depend>
-  <test_depend>python-requests</test_depend>
+  <test_depend>python3-nose</test_depend>
+  <test_depend>python3-requests</test_depend>
 </package>
