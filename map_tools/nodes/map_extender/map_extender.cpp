@@ -128,12 +128,12 @@ static void initialpose_callback(const geometry_msgs::PoseWithCovarianceStamped:
   Eigen::Matrix4f t = ndt.getFinalTransformation();
 
   pcl::PointCloud<pcl::PointXYZI>::Ptr transformed_additional_map_ptr (new pcl::PointCloud<pcl::PointXYZI>());
-  transformed_additional_map_ptr->header.frame_id = "/map";
+  transformed_additional_map_ptr->header.frame_id = "map";
   pcl::transformPointCloud(*additional_map_ptr, *transformed_additional_map_ptr, t);
   sensor_msgs::PointCloud2::Ptr msg_ptr(new sensor_msgs::PointCloud2);
 
   pcl::toROSMsg(*transformed_additional_map_ptr, *msg_ptr);
-  msg_ptr->header.frame_id = "/map";
+  msg_ptr->header.frame_id = "map";
   ndt_map_pub.publish(*msg_ptr);
 
 
