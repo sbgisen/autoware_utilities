@@ -26,11 +26,15 @@
 #include <pcl_ros/point_cloud.h>
 #include <boost/filesystem.hpp>
 
-#include "opencv2/highgui/highgui.hpp"
-#include "opencv2/imgproc/imgproc.hpp"
-#include "opencv2/calib3d/calib3d.hpp"
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/calib3d/calib3d.hpp>
+#define CV_ITERATIVE 0
+#define CV_EPNP 1
+#define CV_P3P 2
+#define CV_DLS 3
 
-#if (CV_MAJOR_VERSION == 3)
+#if (CV_MAJOR_VERSION >= 3)
   #include <opencv2/imgcodecs.hpp>
 #else
   #include <opencv2/contrib/contrib.hpp>
